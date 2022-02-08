@@ -1,10 +1,9 @@
-# Variables Examples
-x = "awesome"
 
-def myfunc():
-    print(("python is" + x))
+#Python Indentation
 
-myfunc()
+if 5 > 2:
+  print("Five is greater than two!")
+
 
 
 
