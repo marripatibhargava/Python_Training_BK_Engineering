@@ -238,6 +238,166 @@ price = 49.95
 myorder = "I want to pay {2} dollars for {0} pieces of item {1}."
 print(myorder.format(quantity, itemno, price))
 
+#The escape character allows you to use double quotes when you normally would not be allowed:
+txt = "We are the so-called \"Vikings\" from the north."
+print(txt)
+
+#Print a message based on whether the condition is True or False:
+a = 200
+b = 33
+
+if b > a:
+  print("b is greater than a")
+else:
+  print("b is not greater than a")
+
+#Evaluate a string and a number:
+print(bool("Hello"))
+print(bool(15))
+
+#Evaluate two variables:
+x = "Hello"
+y = 15
+print(bool(x))
+print(bool(y))
+
+#Print the second item of the list:
+thislist = ["apple", "banana", "cherry"]
+print(thislist[1])
+
+#Print the last item of the list:
+thislist = ["apple", "banana", "cherry"]
+print(thislist[-1])
+
+#This example returns the items from the beginning to, but NOT including, "kiwi":
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[:4])
+
+#This example returns the items from "cherry" to the end:
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:])
+
+#This example returns the items from "orange" (-4) to, but NOT including "mango" (-1):
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[-4:-1])
+
+#Check if "apple" is present in the list:
+thislist = ["apple", "banana", "cherry"]
+if "apple" in thislist:
+  print("Yes, 'apple' is in the fruits list")
+
+#Change the second item:
+thislist = ["apple", "banana", "cherry"]
+thislist[1] = "blackcurrant"
+print(thislist)
+
+#Change the values "banana" and "cherry" with the values "blackcurrant" and "watermelon":
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+thislist[1:3] = ["blackcurrant", "watermelon"]
+print(thislist)
+
+#Change the second value by replacing it with two new values:
+thislist = ["apple", "banana", "cherry"]
+thislist[1:2] = ["blackcurrant", "watermelon"]
+print(thislist)
+
+#Change the second and third value by replacing it with one value:
+thislist = ["apple", "banana", "cherry"]
+thislist[1:3] = ["watermelon"]
+print(thislist)
+
+#Insert "watermelon" as the third item:
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(2, "watermelon")
+print(thislist)
+
+#Using the append() method to append an item:
+thislist = ["apple", "banana", "cherry"]
+thislist.append("orange")
+print(thislist)
+
+#Insert an item as the second position:
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(1, "orange")
+print(thislist)
+
+#Add the elements of tropical to thislist:
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)
+print(thislist)
+
+#Add elements of a tuple to a list:
+thislist = ["apple", "banana", "cherry"]
+thistuple = ("kiwi", "orange")
+thislist.extend(thistuple)
+print(thislist)
+
+#Remove "banana":
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
+
+#Remove the second item:
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist)
+
+#Remove the last item:
+thislist = ["apple", "banana", "cherry"]
+thislist.pop()
+print(thislist)
+
+#Remove the first item:
+thislist = ["apple", "banana", "cherry"]
+del thislist[0]
+print(thislist)
+
+#Delete the entire list:
+thislist = ["apple", "banana", "cherry"]
+del thislist
+
+#Clear the list content:
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+print(thislist)
+
+#Print all items in the list, one by one:
+thislist = ["apple", "banana", "cherry"]
+for x in thislist:
+  print(x)
+
+#Print all items by referring to their index number:
+thislist = ["apple", "banana", "cherry"]
+for i in range(len(thislist)):
+  print(thislist[i])
+
+#Print all items, using a while loop to go through all the index numbers
+thislist = ["apple", "banana", "cherry"]
+i = 0
+while i < len(thislist):
+  print(thislist[i])
+  i = i + 1
+
+#A short hand for loop that will print all items in a list:
+thislist = ["apple", "banana", "cherry"]
+[print(x) for x in thislist]
+
+#Based on a list of fruits, you want a new list, containing only the fruits with the letter "a" in the name.
+#Without list comprehension you will have to write a for statement with a conditional test inside:
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+
+for x in fruits:
+  if "a" in x:
+    newlist.append(x)
+
+print(newlist)
+
+#With list comprehension you can do all that with only one line of code:
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits if "a" in x]
+print(newlist)
 
 
 
