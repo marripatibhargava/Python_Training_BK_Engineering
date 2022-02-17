@@ -723,116 +723,131 @@ y = {"google", "microsoft", "apple"}
 z = x.symmetric_difference(y)
 print(z)
 
-#If statement:
+#Python Dictionaries
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict)
 
-a = 33
-b = 200
-if b > a:
-  print("b is greater than a")
-  
-#Elif: The elif keyword is pythons way of saying "if the previous conditions were not true, then try this condition".
+#Print the "brand" value of the dictionary:
 
-a = 33
-b = 33
-if b > a:
-  print("b is greater than a")
-elif a == b:
-  print("a and b are equal")
-  
-#Else The else keyword catches anything which isn't caught by the preceding conditions.
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
 
-a = 200
-b = 33
-if b > a:
-  print("b is greater than a")
-elif a == b:
-  print("a and b are equal")
-else:
-  print("a is greater than b")
- 
-#You can also have an else without the elif:
-a = 200
-b = 33
-if b > a:
-  print("b is greater than a")
-else:
-  print("b is not greater than a")
-  
-#One line if statement:
-if a > b: print("a is greater than b")
-  
-#Short Hand If ... Else
-a = 2
-b = 330
-print("A") if a > b else print("B")
+#Get the value of the "model" key:
 
-#One line if else statement, with 3 conditions:
-a = 330
-b = 330
-print("A") if a > b else print("=") if a == b else print("B")
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
 
-#AND: Test if a is greater than b, AND if c is greater than a:
-a = 200
-b = 33
-c = 500
-if a > b and c > a:
-  print("Both conditions are True")
-  
-#OR: Test if a is greater than b, OR if a is greater than c:
-a = 200
-b = 33
-c = 500
-if a > b or a > c:
-  print("At least one of the conditions is True")
- 
-#Nested If: You can have if statements inside if statements, this is called nested if statements.
-x = 41
+x = car.keys()
 
-if x > 10:
-  print("Above ten,")
-  if x > 20:
-    print("and also above 20!")
-  else:
-    print("but not above 20.")
-    
- #The pass Statement: if statements cannot be empty, but if you for some reason have an if statement with no content, put in the pass statement to avoid getting an error.
-a = 33
-b = 200
+print(x) #before the change
 
-if b > a:
-  pass
+car["color"] = "white"
 
-#The while Loop
+print(x) #after the change
 
-#Print i as long as i is less than 6:
+#Make a change in the original dictionary, and see that the values list gets updated as well:
 
-i = 1
-while i < 6:
-  print(i)
-  i += 1
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
 
-#Exit the loop when i is 3:
-i = 1
-while i < 6:
-  print(i)
-  if i == 3:
-    break
-  i += 1
+x = car.values()
 
-#Continue to the next iteration if i is 3:
+print(x) #before the change
 
-i = 0
-while i < 6:
-  i += 1
-  if i == 3:
-    continue
-  print(i)
+car["year"] = 2020
 
-#Print a message once the condition is false:
+print(x) #after the change
 
-i = 1
-while i < 6:
-  print(i)
-  i += 1
-else:
-  print("i is no longer less than 6")
+#Add a new item to the original dictionary, and see that the values list gets updated as well:
+
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.values()
+
+print(x) #before the change
+
+car["color"] = "red"
+
+print(x) #after the change
+
+#Make a change in the original dictionary, and see that the items list gets updated as well:
+
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.items()
+
+print(x) #before the change
+
+car["year"] = 2020
+
+print(x) #after the change
+
+#Update the "year" of the car by using the update() method:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"year": 2020})
+
+#The pop() method removes the item with the specified key name:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.pop("model")
+print(thisdict)
+
+#The popitem() method removes the last inserted item (in versions before 3.7, a random item is removed instead):
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.popitem()
+print(thisdict)
+
+#The del keyword removes the item with the specified key name:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+del thisdict["model"]
+print(thisdict)
+
+#The clear() method empties the dictionary:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.clear()
+print(thisdict)
