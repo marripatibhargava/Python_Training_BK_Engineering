@@ -470,9 +470,9 @@ list2 = [1, 2, 3]
 list3 = list1 + list2
 print(list3)
 
-Append list2 into list1:
+#Append list2 into list1:
 
-list1 = ["a", "b" , "c"]
+list1 = ["a", "b", "c"]
 list2 = [1, 2, 3]
 
 for x in list2:
@@ -482,11 +482,122 @@ print(list1)
 
 #Use the extend() method to add list2 at the end of list1:
 
-list1 = ["a", "b" , "c"]
+list1 = ["a", "b", "c"]
 list2 = [1, 2, 3]
 
 list1.extend(list2)
 print(list1)
+
+#Tuple Tuple items are ordered, unchangeable, and allow duplicate values.
+#Tuple items are indexed, the first item has index [0], the second item has index [1] etc.
+
+#Create a Tuple:
+
+thistuple = ("apple", "banana", "cherry")
+print(thistuple)
+
+#Print the number of items in the tuple:
+
+thistuple = ("apple", "banana", "cherry")
+print(len(thistuple))
+
+#Using the tuple() method to make a tuple:
+
+thistuple = tuple(("apple", "banana", "cherry")) # note the double round-brackets
+print(thistuple)
+
+#Print the second item in the tuple:
+thistuple = ("apple", "banana", "cherry")
+print(thistuple[1])
+
+#Return the third, fourth, and fifth item:
+
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[2:5])
+
+#Convert the tuple into a list to be able to change it:
+
+x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+
+print(x)
+
+#Convert the tuple into a list, add "orange", and convert it back into a tuple:
+
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.append("orange")
+thistuple = tuple(y)
+
+#Create a new tuple with the value "orange", and add that tuple:
+
+thistuple = ("apple", "banana", "cherry")
+y = ("orange",)
+thistuple += y
+
+print(thistuple)
+
+#Convert the tuple into a list, remove "apple", and convert it back into a tuple:
+
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.remove("apple")
+thistuple = tuple(y)
+
+#Unpacking a tuple:
+
+fruits = ("apple", "banana", "cherry")
+
+(green, yellow, red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+
+#Iterate through the items and print the values:
+
+thistuple = ("apple", "banana", "cherry")
+for x in thistuple:
+  print(x)
+
+#Print all items by referring to their index number:
+
+thistuple = ("apple", "banana", "cherry")
+for i in range(len(thistuple)):
+  print(thistuple[i])
+
+#Print all items, using a while loop to go through all the index numbers:
+
+thistuple = ("apple", "banana", "cherry")
+i = 0
+while i < len(thistuple):
+  print(thistuple[i])
+  i = i + 1
+
+#Join two tuples:
+
+tuple1 = ("a", "b" , "c")
+tuple2 = (1, 2, 3)
+
+tuple3 = tuple1 + tuple2
+print(tuple3)
+
+#Multiply Tuples
+fruits = ("apple", "banana", "cherry")
+mytuple = fruits * 2
+
+print(mytuple)
+
+#Python Sets
+
+
+
+
+
+
+
 
 
 
