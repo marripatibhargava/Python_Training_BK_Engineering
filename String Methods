@@ -1,0 +1,117 @@
+#Python String capitalize() Method
+txt = "hello, and welcome to my world."
+
+x = txt.capitalize()
+
+print (x)
+
+#Python String casefold() Method
+txt = "Hello, And Welcome To My World!"
+
+x = txt.casefold()
+
+print(x)
+
+#Python String center() Method
+txt = "banana"
+
+x = txt.center(20)
+
+print(x)
+
+#Python String count() Method
+txt = "I love apples, apple are my favorite fruit"
+
+x = txt.count("apple")
+
+print(x)
+
+#Python String encode() Method
+txt = "My name is Ståle"
+
+x = txt.encode()
+
+print(x
+
+
+#Python String endswith() Method
+txt = "Hello, welcome to my world."
+
+x = txt.endswith(".")
+
+print(x)
+
+#Python String expandtabs() Method
+txt = "H\te\tl\tl\to"
+
+x =  txt.expandtabs(2)
+
+print(x)
+
+#Python String find() Method
+txt = "Hello, welcome to my world."
+
+x = txt.find("welcome")
+
+print(x)
+
+#Python String format() Method
+txt = "For only {price:.2f} dollars!"
+print(txt.format(price = 49))
+
+#Python String index() Method
+txt = "Hello, welcome to my world."
+
+x = txt.index("welcome")
+
+print(x)
+
+#Python String isalnum() Method
+txt = "Company12"
+
+x = txt.isalnum()
+
+print(x)
+
+#Python String isalpha() Method
+txt = "CompanyX"
+
+x = txt.isalpha()
+
+print(x)
+
+#Python String isdecimal() Method
+txt = "\u0033" #unicode for 3
+
+x = txt.isdecimal()
+
+print(x
+
+#Python String isdigit() Method
+txt = "50800"
+
+x = txt.isdigit()
+
+print(x)
+
+#Python String isidentifier() Method
+txt = "Demo"
+
+x = txt.isidentifier()
+
+print(x)
+
+#Python String islower() Method
+txt = "hello world!"
+
+x = txt.islower()
+
+print(x)
+
+#Python String c() Method
+txt = "565543"
+
+x = txt.isnumeric()
+
+print(x)
+
