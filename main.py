@@ -1039,3 +1039,42 @@ for x in adj:
   for y in fruits:
     print(x, y)
 
+#In Python a function is defined using the def keyword:
+
+def my_function():
+  print("Hello from a function")
+my_function()
+
+#The following example has a function with one argument (fname).
+#When the function is called, we pass along a first name, which is used inside the function to print the full name:
+
+def my_function(fname):
+  print(fname + " Refsnes")
+
+my_function("Emil")
+my_function("Tobias")
+my_function("Linus")
+
+#Lambda
+#Add 10 to argument a, and return the result:
+x = lambda a : a + 10
+print(x(5))
+
+#Multiply argument a with argument b and return the result:
+
+x = lambda a, b : a * b
+print(x(5, 6))
+
+#Summarize argument a, b, and c and return the result:
+x = lambda a, b, c : a + b + c
+print(x(5, 6, 2))
+
+#Arrays
+cars = ["Ford", "Volvo", "BMW"]
+
+#Get the value of the first array item:
+
+x = cars[0]
+
+
+
