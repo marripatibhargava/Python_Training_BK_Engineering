@@ -1101,6 +1101,79 @@ cars.remove("Volvo")
 
 #Create a class named MyClass, with a property named x:
 
+class Student:
+  def check_pass_fail(self):
+    if self.marks >= 40:
+      return True
+    else:
+      return False
+
+
+Student1 = Student()  # student1  are the objects of the class
+Student1.name = "Harry"  # student1.name is the attribute of the class
+Student1.marks = 85
+print(Student1.name)
+
+did_pass = Student1.check_pass_fail()
+print(did_pass)
+
+Student2 = Student()
+
+Student2.name = "Janet"
+Student2.marks = 30
+did_pass = Student2.check_pass_fail()
+
+print(did_pass)
+.............
+
+
+class Student:
+  def check_pass_fail(self):
+    if self.marks >= 40:
+      return True
+    else:
+      return False
+
+  def _init_(self, name, marks):
+    self.name = name
+    self.marks = marks
+
+
+Student1 = Student("Harry", 80)
+Student2 = Student("Janet", 30)
+
+did_pass = Student1.check_pass_fail()
+print(did_pass)
+print(Student1.name)
+print(Student1.marks)
+
+did_pass = Student2.check_pass_fail()
+print(did_pass)
+print(Student2.name)
+print(Student2.marks)
+
+..............
+
+
+class Complex:
+  def _init_(self, real, imag):
+    self.real = real
+    self.imag = imag
+
+  def add(self, number):
+    real = self.real + number.real
+    imag = self.imag + number.imag
+    result = Complex(real, imag)
+    return result
+
+
+n1 = Complex(5, 6)
+n2 = Complex(-4, 2)
+result = n1.add(n2)
+
+print("real =", result.real)
+print("imag =", result.imag)
+...........
 class MyClass:
   x = 5
 #Now we can use the class named MyClass to create objects:
@@ -1164,7 +1237,7 @@ del p1
 
 class Person:
   pass
-
+.........
 
 
 
