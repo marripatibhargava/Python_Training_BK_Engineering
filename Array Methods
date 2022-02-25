@@ -1,0 +1,6 @@
+#Python List append() Method
+
+#Add an element to the fruits list:
+
+fruits = ['apple', 'banana', 'cherry']
+fruits.append("orange")
