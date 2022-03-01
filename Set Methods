@@ -1,0 +1,6 @@
+#Python Set add() Method
+#Add an element to the fruits set:
+
+fruits = {"apple", "banana", "cherry"}
+fruits.add("orange")
+print(fruits)
