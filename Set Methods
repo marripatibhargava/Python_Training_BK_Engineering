@@ -4,3 +4,159 @@
 fruits = {"apple", "banana", "cherry"}
 fruits.add("orange")
 print(fruits)
+...............................................
+#Python Set clear() Method
+#Remove all elements from the fruits set:
+
+fruits = {"apple", "banana", "cherry"}
+
+fruits.clear()
+
+print(fruits)
+...................................................
+#Python Set copy() Method
+#Copy the fruits set:
+
+fruits = {"apple", "banana", "cherry"}
+
+x = fruits.copy()
+
+print(x)
+......................................................
+#Python Set difference() Method
+#Return a set that contains the items that only exist in set x, and not in set y:
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+z = x.difference(y)
+
+print(z)
+.............................................................
+#Python Set difference_update() Method
+#Remove the items that exist in both sets:
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+x.difference_update(y)
+
+print(x)
+..........................................
+#Python Set discard() Method
+#Remove "banana" from the set:
+
+fruits = {"apple", "banana", "cherry"}
+
+fruits.discard("banana")
+
+print(fruits)
+..........................................................
+#Python Set intersection() Method
+#Return a set that contains the items that exist in both set x, and set y:
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+z = x.intersection(y)
+
+print(z)
+.........................................................
+#Python Set intersection_update() Method
+#Remove the items that is not present in both x and y:
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+x.intersection_update(y)
+
+print(x)
+...............................................................
+#Python Set isdisjoint() Method
+#Return True if no items in set x is present in set y:
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "facebook"}
+
+z = x.isdisjoint(y)
+
+print(z)
+....................................................................
+#Python Set issubset() Method
+#Return True if all items in set x are present in set y:
+
+x = {"a", "b", "c"}
+y = {"f", "e", "d", "c", "b", "a"}
+
+z = x.issubset(y)
+
+print(z)
+..........................................................................
+#Python Set issuperset() Method
+#Return True if all items set y are present in set x:
+
+x = {"f", "e", "d", "c", "b", "a"}
+y = {"a", "b", "c"}
+
+z = x.issuperset(y)
+
+print(z)
+..........................................................................
+#Python Set pop() Method
+#Remove a random item from the set:
+
+fruits = {"apple", "banana", "cherry"}
+
+fruits.pop()
+
+print(fruits)
+................................................................
+#Python Set remove() Method
+#Remove "banana" from the set:
+
+fruits = {"apple", "banana", "cherry"}
+
+fruits.remove("banana")
+
+print(fruits)
+.........................................................................
+#Python Set symmetric_difference() Method
+#Return a set that contains all items from both sets, except items that are present in both sets:
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+z = x.symmetric_difference(y)
+
+print(z)
+...................................................................
+#Python Set symmetric_difference_update() Method
+#Remove the items that are present in both sets, AND insert the items that is not present in both sets:
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+x.symmetric_difference_update(y)
+
+print(x)
+..............................................................................
+#Python Set union() Method
+#Return a set that contains all items from both sets, duplicates are excluded:
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+z = x.union(y)
+
+print(z)
+.................................................................................
+#Python Set update() Method
+#Insert the items from set y into set x:
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+x.update(y)
+
+print(x)
+..............................................................
