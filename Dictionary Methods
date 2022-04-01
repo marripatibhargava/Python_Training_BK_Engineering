@@ -1,0 +1,140 @@
+#Python Dictionary clear() Method
+#Remove all elements from the car list:
+
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+car.clear()
+
+print(car)
+.......................................................
+#Python Dictionary copy() Method
+#Copy the car dictionary:
+
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.copy()
+
+print(x)
+.............................................................
+#Python Dictionary fromkeys() Method
+#Create a dictionary with 3 keys, all with the value 0:
+
+x = ('key1', 'key2', 'key3')
+y = 0
+
+thisdict = dict.fromkeys(x, y)
+
+print(thisdict)
+...................................................................
+#Python Dictionary get() Method
+#Get the value of the "model" item:
+
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.get("model")
+
+print(x)
+...................................................................
+#Python Dictionary items() Method
+#Return the dictionary's key-value pairs:
+
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.items()
+
+print(x)
+....................................................................
+#Python Dictionary keys() Method
+#Return the keys:
+
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.keys()
+
+print(x)
+.....................................................
+#Python Dictionary pop() Method
+#Remove "model" from the dictionary:
+
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+car.pop("model")
+
+print(car)
+............................................................
+#Python Dictionary popitem() Method
+#Remove the last item from the dictionary:
+
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+car.popitem()
+
+print(car)
+.......................................................
+#Python Dictionary setdefault() Method
+#Get the value of the "model" item:
+
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.setdefault("model", "Bronco")
+
+print(x)
+................................................................
+#Python Dictionary update() Method
+#Insert an item to the dictionary:
+
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+car.update({"color": "White"})
+
+print(car)
+....................................................................
+#Python Dictionary values() Method
+#Return the values:
+
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.values()
+
+print(x)
+............................................................................

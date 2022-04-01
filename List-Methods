@@ -1,0 +1,87 @@
+#append()	Adds an element at the end of the list
+#Add an element to the fruits list:
+
+fruits = ['apple', 'banana', 'cherry']
+fruits.append("orange")
+
+.........................................................
+#Python List clear() Method
+#Remove all elements from the fruits list:
+
+fruits = ['apple', 'banana', 'cherry', 'orange']
+
+fruits.clear()
+
+.............................................................
+#Python List copy() Method
+#Copy the fruits list:
+
+fruits = ['apple', 'banana', 'cherry', 'orange']
+
+x = fruits.copy()
+
+..............................................................
+#Python List count() Method
+#Return the number of times the value "cherry" appears in the fruits list:
+
+fruits = ['apple', 'banana', 'cherry']
+
+x = fruits.count("cherry")
+
+.................................................................
+#Python List extend() Method
+#Add the elements of cars to the fruits list:
+
+fruits = ['apple', 'banana', 'cherry']
+
+cars = ['Ford', 'BMW', 'Volvo']
+
+fruits.extend(cars)
+
+................................................................
+#Python List index() Method
+#What is the position of the value "cherry":
+
+fruits = ['apple', 'banana', 'cherry']
+
+x = fruits.index("cherry")
+
+..................................................................
+
+#Python List insert() Method
+#Insert the value "orange" as the second element of the fruit list:
+
+fruits = ['apple', 'banana', 'cherry']
+
+fruits.insert(1, "orange")
+..................................................................
+#Python List pop() Method
+#Remove the second element of the fruit list:
+
+fruits = ['apple', 'banana', 'cherry']
+
+fruits.pop(1)
+...............................................................
+
+#Python List remove() Method
+#Remove the "banana" element of the fruit list:
+
+fruits = ['apple', 'banana', 'cherry']
+
+fruits.remove("banana")
+
+.................................................................
+#Python List reverse() Method
+#Reverse the order of the fruit list:
+
+fruits = ['apple', 'banana', 'cherry']
+
+fruits.reverse()
+..............................................................
+#Python List sort() Method
+#Sort the list alphabetically:
+
+cars = ['Ford', 'BMW', 'Volvo']
+
+cars.sort()
+....................................................................
