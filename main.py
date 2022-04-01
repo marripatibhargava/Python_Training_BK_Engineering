@@ -322,12 +322,13 @@ thislist.insert(1, "orange")
 print(thislist)
 
 #Add the elements of tropical to thislist:
+
 thislist = ["apple", "banana", "cherry"]
 tropical = ["mango", "pineapple", "papaya"]
 thislist.extend(tropical)
 print(thislist)
-
-#Add elements of a tuple to a list:
+#Add elements of a tu
+# ple to a list:
 thislist = ["apple", "banana", "cherry"]
 thistuple = ("kiwi", "orange")
 thislist.extend(thistuple)
@@ -1096,7 +1097,20 @@ cars.pop(1)
 #Delete the element that has the value "Volvo":
 
 cars.remove("Volvo")
+.............
 
+#oops concept in Python
+
+#Creating an empty Class in Python
+
+# Python3 program to
+# demonstrate defining
+# a class
+
+class Dog:
+	pass
+
+............
 #Class/ Objects
 
 #Create a class named MyClass, with a property named x:
@@ -1239,7 +1253,286 @@ class Person:
   pass
 .........
 
+#Python Inheritance
+#Create a class named Person, with firstname and lastname properties, and a printname method:
+
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+
+  def printname(self):
+    print(self.firstname, self.lastname)
+
+#Use the Person class to create an object, and then execute the printname method:
+
+x = Person("John", "Doe")
+x.printname()
+
+#Python Iterators
+#Return an iterator from a tuple, and print each value:
+
+mytuple = ("apple", "banana", "cherry")
+myit = iter(mytuple)
+
+print(next(myit))
+print(next(myit))
+print(next(myit))
+
+#Strings are also iterable objects, containing a sequence of characters:
+
+mystr = "banana"
+myit = iter(mystr)
+print(next(myit))
+print(next(myit))
+print(next(myit))
+print(next(myit))
+print(next(myit))
+print(next(myit))
+
+#Looping Through an Iterator
+
+mytuple = ("apple", "banana", "cherry")
+
+for x in mytuple:
+  print(x)
+
+#Iterate the characters of a string:
+
+mystr = "banana"
+
+for x in mystr:
+  print(x)
+
+#Create an iterator that returns numbers, starting with 1, and each sequence will increase by one (returning 1,2,3,4,5 etc.):
+
+class MyNumbers:
+  def __iter__(self):
+    self.a = 1
+    return self
+
+  def __next__(self):
+    x = self.a
+    self.a += 1
+    return x
+
+myclass = MyNumbers()
+myiter = iter(myclass)
+
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+
+#Create a Module
+def greeting(name):
+  print("Hello, " + name)
+
+#Use a Module
+import mymodule
+
+mymodule.greeting("Jonathan")
+
+#Python Dates
+import datetime
+
+x = datetime.datetime.now()
+print(x)
+
+#Python Maths
+#The min() and max() functions can be used to find the lowest or highest value in an iterable:
+
+x = min(5, 10, 25)
+y = max(5, 10, 25)
+
+print(x)
+print(y)
+
+#Import the json module:
+
+import json
+# some JSON:
+x =  '{ "name":"John", "age":30, "city":"New York"}'
+# parse x:
+y = json.loads(x)
+# the result is a Python dictionary:
+print(y["age"])
+
+#Convert from Python to JSON:
+
+import json
+
+# a Python object (dict):
+x = {
+  "name": "John",
+  "age": 30,
+  "city": "New York"
+}
+
+# convert into JSON:
+y = json.dumps(x)
+
+# the result is a JSON string:
+print(y)
+
+#Regex in Python
+
+import re
+
+txt = "The rain in Spain"
+x = re.search("^The.*Spain$", txt)
+
+.........
+
+#Iterators
+
+iter_list = iter(['Apple', 'Bananna', 'Grapes'])
+print(next(iter_list))
+print(next(iter_list))
+print(next(iter_list))
 
 
+#Generators
+
+def sq_numbers(n):
+	for i in range(1, n+1):
+		yield i*i
+
+a = sq_numbers(3)
+
+print("The square of numbers 1,2,3 are : ")
+print(next(a))
+print(next(a))
+print(next(a))
+
+........
+
+#nested function
+def outer():
+  x = 3
+  def inner():
+    print(x)
+  inner()
+
+outer()
+
+............
+
+#Closure
+
+def outer():
+  x = 3
+  def inner():
+    y = 3
+    result = x + y
+    return result
+  return inner()
+  return inner() #RETURN FUNCTION
+
+a = outer()
+print(a)
+
+...
+
+def outer():
+  msg = "hello"
+  def inner():
+    print(msg)
+  return inner()
+
+a = outer()
+a
+
+.....
+
+#Decorators
+def div(a, b):
+  print(a / b)
+
+
+def smart_div(func):
+  def inner(a, b):
+    if a < b:
+      a, b = b, a
+    return func(a, b)
+
+  return inner
+
+
+div1 = smart_div(div)
+
+div1(2, 4)
+
+.......
+#Python RegEx
+import re
+
+#Search the string to see if it starts with "The" and ends with "Spain":
+txt = "The rain in Spain"
+x = re.search("^The.*Spain$", txt)
+print(x)
+
+#The findall() function returns a list containing all matches.
+txt = "The rain in Spain"
+x = re.findall("ai", txt)
+print(x)
+
+#Return an empty list if no match was found:
+txt = "The rain in Spain"
+x = re.findall("Portugal", txt)
+print(x)
+
+#Search for the first white-space character in the string:
+txt = "The rain in Spain"
+x = re.search("\s", txt)
+print("The first white-space character is located in position:", x.start())
+
+#Make a search that returns no match:
+txt = "The rain in Spain"
+x = re.search("Portugal", txt)
+print(x)
+
+#Split at each white-space character:
+txt = "The rain in Spain"
+x = re.split("\s", txt)
+print(x)
+
+#Split the string only at the first occurrence:
+txt = "The rain in Spain"
+x = re.split("\s", txt, 1)
+print(x)
+
+#Replace every white-space character with the number 9:
+txt = "The rain in Spain"
+x = re.sub("\s", "9", txt)
+print(x)
+
+#Replace the first 2 occurrences:
+txt = "The rain in Spain"
+x = re.sub("\s", "9", txt, 2)
+print(x)
+
+#Do a search that will return a Match Object:
+txt = "The rain in Spain"
+x = re.search("ai", txt)
+print(x) #this will print an object
+
+#Print the position (start- and end-position) of the first match occurrence.
+#The regular expression looks for any words that starts with an upper case "S":
+txt = "The rain in Spain"
+x = re.search(r"\bS\w+", txt)
+print(x.span())
+
+#Print the string passed into the function:
+txt = "The rain in Spain"
+x = re.search(r"\bS\w+", txt)
+print(x.string)
+
+#Print the part of the string where there was a match.
+#The regular expression looks for any words that starts with an upper case "S":
+txt = "The rain in Spain"
+x = re.search(r"\bS\w+", txt)
+print(x.group())
 
 
